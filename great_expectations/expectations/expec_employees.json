@@ -1,0 +1,111 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "expec_employees",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 40,
+        "min_value": 40
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_set",
+      "kwargs": {
+        "column_set": [
+          "hire_date",
+          "department_id",
+          "first_name",
+          "phone_number",
+          "manager_id",
+          "last_name",
+          "employee_id",
+          "job_id",
+          "salary",
+          "email"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "salary",
+        "max_value": 2500,
+        "min_value": 2500
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "salary",
+        "max_value": 24000,
+        "min_value": 24000
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "column": "employee_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "job_id",
+        "max_value": 19,
+        "min_value": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "department_id",
+        "max_value": 11,
+        "min_value": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "hire_date"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "salary",
+        "max_value": 8060,
+        "min_value": 8060
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "citation_date": "2023-08-18T23:19:14.843638Z",
+        "comment": "Created by effective Rule-Based Profiler of OnboardingDataAssistant with the configuration included.\n"
+      },
+      {
+        "batch_request": {
+          "data_asset_name": "employees",
+          "data_connector_name": "default_configured_data_connector_name",
+          "datasource_name": "test_DB",
+          "limit": 1000
+        },
+        "citation_date": "2023-08-20T23:45:36.433340Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.17.10+0.g0d308ac69.dirty"
+  }
+}
